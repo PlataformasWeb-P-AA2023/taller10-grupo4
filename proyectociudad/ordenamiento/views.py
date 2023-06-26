@@ -45,9 +45,11 @@ def Barrio_edit(request,id):
         form = BarrioForm(request.POST,instance=barrio)
         if form.is_valid():
             form.save()
+            
             return redirect(listar)
     else:
         form = BarrioForm(instance=barrio)
+        
     return render(request, 'barrio_form.html', {'form': form})
 
 

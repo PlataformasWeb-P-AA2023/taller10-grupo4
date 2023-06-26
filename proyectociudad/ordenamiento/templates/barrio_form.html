@@ -1,7 +1,7 @@
 <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
-    {% if object %}
+    {% if form.nombre.value != None  %}
     <button type="submit">editar barrio</button>
     {% else %}
     <button type="submit">crear barrio</button>
