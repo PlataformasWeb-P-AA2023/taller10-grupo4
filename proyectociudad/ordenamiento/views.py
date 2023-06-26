@@ -51,5 +51,8 @@ def Barrio_edit(request,id):
         form = BarrioForm(instance=barrio)
         
     return render(request, 'barrio_form.html', {'form': form})
+def verbarrios(request , id):
+    return render(request, 'verbarrios.html',{ 'data':Parroquia.objects.get(pk=id) })
+
 
 
