@@ -1,5 +1,12 @@
 { }
-
+<a href="{% url 'crearparroquia' %}">crearparroquia</a>
+<a href="{% url 'crearbarrio' %}">crearbarrio</a>
 {% for i in data %}
-{{ i }}
+<p>{{ i }} <a href="{% url 'editarparroquia' i.pk %}">editar</a></p>
+<ul>
+{% for j in i.Barrios.all %}
+<li> {{ j }} <a href="{% url 'editarbarrio' i.pk %}">editar</a> </li> 
+{% endfor %}
+</ul>
+
 {% endfor %}

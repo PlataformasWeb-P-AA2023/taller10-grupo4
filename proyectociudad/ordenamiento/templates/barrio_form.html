@@ -1,0 +1,12 @@
+<form method="POST">
+    {% csrf_token %}
+    {{ form}}
+    {% if object%}
+    <button type="submit">editar barrio</button>
+    {% else %}
+    <button type="submit">crear barrio</button>
+    {% endif %}
+
+    
+
+</form>

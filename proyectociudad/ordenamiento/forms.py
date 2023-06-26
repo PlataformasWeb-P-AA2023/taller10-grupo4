@@ -32,12 +32,7 @@ class BarrioForm(ModelForm):
         fields = '__all__'
 
 
-class BarrioParroquiaForm(ModelForm):
 
-    def __init__(self, estudiante, *args, **kwargs):
-        super(BarrioParroquiaForm, self).__init__(*args, **kwargs)
-       
-        self.fields["parroquia"].widget = forms.widgets.()
         
     
         """
