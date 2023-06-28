@@ -1,13 +1,12 @@
 <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
-    {% if form.nombre.value != None  %}
-    <button type="submit">editar parroquia </button>
-    
+    {% if form.nombre.value != None %}
+        <button type="submit">editar parroquia</button>
+
     {% else %}
-    <button type="submit">crear parroquia</button>
+        <button type="submit">crear parroquia</button>
     {% endif %}
 
-    
 
 </form>
